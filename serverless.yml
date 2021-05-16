@@ -1,0 +1,41 @@
+component: nuxtjs
+name: nuxtjs-reserved-instance-test-${env:count}
+stage: dev
+
+inputs:
+  src:
+    src: ./simple-nuxt
+    exclude:
+      - .env
+      - assets
+      - components
+      - layouts
+      - middleware
+      - pages
+      - plugins
+      - store
+      - .editorconfig
+      - .gitignore
+      - jsconfig.json
+      - package.json
+      - README.md
+      - yarn.lock
+      - node_modules
+      - node_modules.zip
+  region: ap-shanghai
+  functionConf:
+    name: nuxtjs-reserved-instance-${env:count}
+    runtime: Nodejs12.16
+    memorySize: 256
+    timeout: 20
+    environment:
+      variables:
+        NODE_ENV: production
+    layers:
+      - name: tencent-scf-reserved-instance-nuxt-shared
+        version: 1
+  apigatewayConf:
+    name: nuxtjs_reserved_instance_${env:count}
+    protocols:
+      - http
+    environment: release

@@ -1,0 +1,18 @@
+{
+  "name": "tencent-scf-reserved-instance-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:sonofmagic/tencent-scf-reserved-instance-test.git",
+  "author": "SonOfMagic <qq1324318532@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "cd ./simple-nuxt && npm run build",
+    "start": "cd ./simple-nuxt && npm run start",
+    "deploy:0": "cross-env count=0 components deploy",
+    "deploy:10": "cross-env count=10 components deploy",
+    "deploy:20": "cross-env count=20 components deploy"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  }
+}
