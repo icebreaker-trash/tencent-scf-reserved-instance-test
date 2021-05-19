@@ -10,7 +10,9 @@
     "start": "cd ./simple-nuxt && npm run start",
     "deploy:0": "cross-env count=0 components deploy",
     "deploy:10": "cross-env count=10 components deploy",
-    "deploy:20": "cross-env count=20 components deploy"
+    "deploy:20": "cross-env count=20 components deploy",
+    "sls-info:0": "cross-env count=0 components info",
+    "dev": "cross-env count=0 components dev"
   },
   "devDependencies": {
     "cross-env": "^7.0.3"
